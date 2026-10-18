@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 4: Refraction of Light at Curved Surfaces - Solutions & Quiz</title>
+  <!-- Google Fonts: Noto Sans Telugu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- MathJax Configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script id="mathjax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body, button, input, select, textarea {
+      font-family: 'Noto Sans Telugu', system-ui, -apple-system, sans-serif;
+    }
+    .lang-te { display: none; }
+    .active-te .lang-en { display: none !important; }
+    .active-te .lang-te { display: block !important; }
+    .active-te inline.lang-te, .active-te span.lang-te { display: inline !important; }
+    .answer-content { display: none; }
+    .answer-content.show { display: block; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans min-h-screen flex flex-col justify-between leading-relaxed">
+
+  <!-- Header & Language Switcher -->
+  <header class="bg-blue-800 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 py-3 md:py-4 flex justify-between items-center gap-2">
+      <div>
+        <h1 class="text-lg md:text-2xl font-bold leading-tight">4. REFRACTION OF LIGHT AT CURVED SURFACES</h1>
+        <p class="text-xs md:text-sm text-blue-200 mt-0.5">Class 10 Physical Science | Abhyasa Deepika Assessment & Quiz</p>
+      </div>
+      <!-- Language Toggle Switch -->
+      <button onclick="toggleLanguage()" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold px-3 py-1.5 md:px-4 md:py-2 rounded-lg shadow transition duration-200 text-xs md:text-sm shrink-0 flex items-center gap-1.5">
+        <span>🌐</span>
+        <span id="langBtnText">Switch to Telugu</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-4xl mx-auto px-3 md:px-4 py-6 md:py-8 flex-grow w-full">
+
+    <div class="bg-white rounded-xl shadow-md p-4 md:p-6 border border-gray-200 mb-6">
+
+      <!-- SECTION 1: VERY SHORT ANSWER QUESTIONS -->
+      <div class="bg-blue-100 border-l-4 border-blue-800 p-3 rounded mb-6">
+        <h2 class="text-base md:text-lg font-bold text-blue-900">
+          <span class="lang-en">Very Short Answer Questions</span>
+          <span class="lang-te">అతి స్వల్ప సమాధాన ప్రశ్నలు</span>
+        </h2>
+      </div>
+
+      <div class="space-y-4 mb-8">
+        <!-- Q1 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('ans1', 'icon1')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">1. Complete the following diagram (Concave lens with parallel rays).</span>
+              <span class="lang-te">1. కింది రేఖా చిత్రాన్ని పూర్తి చేయండి (సమాంతర కిరణాలు గల పుటాకార కటకం).</span>
+            </span>
+            <span id="icon1" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="ans1" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm">
+            <div class="lang-en">
+              <p>Answer: Parallel rays incident on a concave lens diverge after refraction such that they appear to come from the principal focus ($F_1$) on the same side.</p>
+            </div>
+            <div class="lang-te">
+              <p>జవాబు: పుటాకార కటకంపై పడే సమాంతర కాంతి కిరణాలు వక్రీభవనం చెంది విసరణ చెందుతాయి (Diverge అవుతాయి). వాటిని వెనుకకు పొడిగిస్తే ప్రధాన నాభి ($F_1$) వద్ద కలుస్తాయి.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('ans2', 'icon2')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">2. What happens, if a parallel beam of light which makes some angle with principal axis incident on a convex lens?</span>
+              <span class="lang-te">2. ప్రధాన అక్షంతో కొంత కోణం చేస్తూ ప్రయాణించే సమాంతర కాంతి కిరణాలు కుంభాకార కటకంపై పడితే ఏం జరుగుతుంది?</span>
+            </span>
+            <span id="icon2" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="ans2" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm">
+            <div class="lang-en">
+              <p>Answer: They converge at a point lying on the focal plane (a plane passing through the focus perpendicular to the principal axis), rather than on the principal axis itself.</p>
+            </div>
+            <div class="lang-te">
+              <p>జవాబు: ఆ కిరణాలు ప్రధాన అక్షంపై కాకుండా నాభీయ తలంలో ఉండే (Focal plane) ఒక నిర్దిష్ట బిందువు వద్ద కేంద్రీకృతమవుతాయి.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('ans3', 'icon3')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">3. How do you represent convex lens and concave lens while drawing ray diagrams?</span>
+              <span class="lang-te">3. రేఖా చిత్రాలు గీసేటప్పుడు కుంభాకార మరియు పుటాకార కటకాలను ఎలా సూచిస్తారు?</span>
+            </span>
+            <span id="icon3" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="ans3" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm">
+            <div class="lang-en space-y-1">
+              <p>• Convex lens is represented by a vertical double arrow line ($\uparrow\downarrow$).</p>
+              <p>• Concave lens is represented by a double arrow line pointing inwards ($\downarrow\uparrow$).</p>
+            </div>
+            <div class="lang-te space-y-1">
+              <p>• కుంభాకార కటకాన్ని నిలువుగా రెండు వైపులా బాణం గుర్తు ఉన్న రేఖ ($\uparrow\downarrow$) తో సూచిస్తారు.</p>
+              <p>• పుటాకార కటకాన్ని లోపలికి బాణం గుర్తులు ఉన్న రేఖ ($\downarrow\uparrow$) తో సూచిస్తారు.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('ans4', 'icon4')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">4. Why convex lens used as magnifier?</span>
+              <span class="lang-te">4. కుంభాకార కటకాన్ని বিবర్థని (Magnifier) గా ఎందుకు ఉపయోగిస్తారు?</span>
+            </span>
+            <span id="icon4" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="ans4" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm">
+            <div class="lang-en">
+              <p>Answer: When an object is placed within the focal length ($u < f$) of a convex lens, it forms an erect, virtual, and magnified image on the same side of the lens.</p>
+            </div>
+            <div class="lang-te">
+              <p>జవాబు: వస్తువును నాభ్యాంతరం లోపల ($u < f$) ఉంచినప్పుడు, కుంభాకార కటకం నిలువుగా ఉండే పెద్దదైన మిథ్యా ప్రతిబింబాన్ని ఏర్పరుస్తుంది. అందుకే దీనిని বিবర్థనిగా వాడతారు.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('ans5', 'icon5')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">5. List out the material used in the experiment to show that focal length of a lens depends on surrounding medium.</span>
+              <span class="lang-te">5. కటక నాభ్యాంతరం అది ఉంచిన యానకంపై ఆధారపడుతుందని నిరూపించే ప్రయోగానికి కావలసిన పరికరాలు తెలపండి.</span>
+            </span>
+            <span id="icon5" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="ans5" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm">
+            <div class="lang-en">
+              <p>Apparatus: Convex lens, circular hole glass tumbler/jar, water, black paper, stand.</p>
+            </div>
+            <div class="lang-te">
+              <p>పరికరాలు: కుంభాకార కటకం, వృత్తాకార రంధ్రం గల గాజు పాత్ర, నీరు, నల్లని కాగితం, స్టాండ్.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('ans6', 'icon6')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">6. How do you say that focal length of concave lens is always negative?</span>
+              <span class="lang-te">6. పుటాకార కటక నాభ్యాంతరం ఎల్లప్పుడూ ऋణాత్మకం (Negative) అని ఎలా చెప్పగలవు?</span>
+            </span>
+            <span id="icon6" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="ans6" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm">
+            <div class="lang-en">
+              <p>Answer: According to sign convention, distances measured against the direction of incident light are negative. Since the principal focus of a concave lens lies on the left side (same side as incident light), its focal length is always negative.</p>
+            </div>
+            <div class="lang-te">
+              <p>జవాబు: కాంతి కిరణాల ప్రయాణ దిశకు వ్యతిరేక దిశలో దూరం కొలుస్తాము కాబట్టి, పుటాకార కటక నాభి ఎడమ వైపు ఉంటుంది. కావున దాని నాభ్యాంతరం ఎల్లప్పుడూ ऋణాత్మకం (-ve) అవుతుంది.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2: SHORT ANSWER QUESTIONS -->
+      <div class="bg-blue-100 border-l-4 border-blue-800 p-3 rounded mb-6">
+        <h2 class="text-base md:text-lg font-bold text-blue-900">
+          <span class="lang-en">Short Answer Questions</span>
+          <span class="lang-te">స్వల్ప సమాధాన ప్రశ్నలు</span>
+        </h2>
+      </div>
+
+      <div class="space-y-4 mb-8">
+        <!-- SQ1 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('sans1', 'sicon1')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">1. How light rays behave when passing through optic centre of convex lens and concave lens?</span>
+              <span class="lang-te">1. కుంభాకార మరియు పుటాకార కటకాల దృశ్య కేంద్రం (Optic centre) గుండా వెళ్లే కాంతి కిరణాలు ఎలా ప్రవర్తిస్తాయి?</span>
+            </span>
+            <span id="sicon1" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="sans1" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm">
+            <div class="lang-en">
+              <p>Answer: A light ray passing through the optic centre of either a convex or a concave lens passes through without any deviation (undeviated).</p>
+            </div>
+            <div class="lang-te">
+              <p>జవాబు: కుంభాకార లేదా పుటాకార కటకం యొక్క దృశ్య కేంద్రం ($P$) గుండా ప్రయాణించే కాంతి కిరణం ఎలాంటి వక్రీభవనం చెందకుండా ఎలాంటి విచలనం లేకుండా నేరుగా వెళుతుంది.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SQ2 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('sans2', 'sicon2')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">2. Write the difference between real and virtual images.</span>
+              <span class="lang-te">2. నిజ ప్రతిబింబం మరియు మిథ్యా ప్రతిబింబాల మధ్య తేడాలు రాయండి.</span>
+            </span>
+            <span id="sicon2" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="sans2" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm space-y-1">
+            <div class="lang-en">
+              <p>• Real Image: Formed by actual intersection of light rays, can be caught on a screen, always inverted.</p>
+              <p>• Virtual Image: Formed by apparent intersection of light rays, cannot be caught on a screen, always erect.</p>
+            </div>
+            <div class="lang-te">
+              <p>• నిజ ప్రతిబింబం (Real Image): కాంతి కిరణాలు నిజంగా ఖండించుకోవడం వల్ల ఏర్పడుతుంది. తెరపై పట్టవచ్చు. ఎల్లప్పుడూ తలక్రిందులుగా ఉంటుంది.</p>
+              <p>• మిథ్యా ప్రతిబింబం (Virtual Image): కాంతి కిరణాలను వెనుకకు పొడిగిస్తే ఏర్పడుతుంది. తెరపై పట్టలేము. ఎల్లప్పుడూ నిలువుగా ఉంటుంది.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SQ3 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('sans3', 'sicon3')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">3. Write any two precautions taken while conducting an experiment to find image distances for different object distances.</span>
+              <span class="lang-te">3. కటకం ద్వారా ప్రతిబింబ దూరాన్ని కనుగొనే ప్రయోగంలో పాటించవలసిన ఏవైనా రెండు జాగ్రత్తలు తెలపండి.</span>
+            </span>
+            <span id="sicon3" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="sans3" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm space-y-1">
+            <div class="lang-en">
+              <p>1. Align the lens, object (candle), and screen along the same horizontal line (principal axis).</p>
+              <p>2. Measure distances carefully from the optic centre of the lens.</p>
+            </div>
+            <div class="lang-te">
+              <p>1. కటకం, వస్తువు (మొవ్వొత్తి) మరియు తెర అన్నీ ఒకే సరళ రేఖపై (ప్రధాన అక్షంపై) ఉండేలా చూడాలి.</p>
+              <p>2. దూరాలను కటక దృశ్య కేంద్రం నుండి జాగ్రత్తగా కొలవాలి.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SQ4 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('sans4', 'sicon4')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">4. What happens, if concave lens is used as magnifier instead of convex lens in microscope?</span>
+              <span class="lang-te">4. సూక్ష్మదర్శినిలో (Microscope) కుంభాకార కటకానికి బదులుగా పుటాకార కటకాన్ని বিবర్థనిగా వాడితే ఏమవుతుంది?</span>
+            </span>
+            <span id="sicon4" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="sans4" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm">
+            <div class="lang-en">
+              <p>Answer: A concave lens always forms a diminished (smaller) virtual image. Hence, it cannot magnify objects, making it useless as a magnifier in a microscope.</p>
+            </div>
+            <div class="lang-te">
+              <p>జవాబు: పుటాకార కటకం ఎల్లప్పుడూ చిన్నదైన (Diminished) మిథ్యా ప్రతిబింబిన్నే ఇస్తుంది. కావున ఇది వస్తువును పెద్దదిగా చూపలేదు, అందువల్ల దీనిని বিবర్థనిగా వాడలేము.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 3: ESSAY TYPE QUESTIONS -->
+      <div class="bg-blue-100 border-l-4 border-blue-800 p-3 rounded mb-6">
+        <h2 class="text-base md:text-lg font-bold text-blue-900">
+          <span class="lang-en">Essay Type Questions</span>
+          <span class="lang-te">వ్యాసరూప సమాధాన ప్రశ్నలు</span>
+        </h2>
+      </div>
+
+      <div class="space-y-4 mb-8">
+        <!-- EQ1 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('eans1', 'eicon1')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">1. Write rules to draw ray diagrams for image formation by lenses.</span>
+              <span class="lang-te">1. కటకాల ద్వారా ప్రతిబింబ ఏర్పడే విధానాన్ని తెలపడానికి రేఖాచిత్రాలు గీయడానికి సూత్రాలు/నియమాలు రాయండి.</span>
+            </span>
+            <span id="eicon1" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="eans1" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm space-y-2">
+            <div class="lang-en space-y-1">
+              <p>1. <strong>Rule 1:</strong> Ray parallel to principal axis passes through (or appears from) the focus after refraction.</p>
+              <p>2. <strong>Rule 2:</strong> Ray passing through the optic centre passes undeviated.</p>
+              <p>3. <strong>Rule 3:</strong> Ray passing through the focus becomes parallel to the principal axis after refraction.</p>
+            </div>
+            <div class="lang-te space-y-1">
+              <p>1. <strong>నియమం 1:</strong> ప్రధాన అక్షానికి సమాంతరంగా ప్రయాణించే కాంతి కిరణం కటకం గుండా వక్రీభవనం చెందాక నాభి ($F$) గుండా వెళుతుంది.</p>
+              <p>2. <strong>నియమం 2:</strong> దృశ్య కేంద్రం ($P$) గుండా వెళ్లే కిరణం ఎలాంటి విచలనం లేకుండా నేరుగా వెళుతుంది.</p>
+              <p>3. <strong>నియమం 3:</strong> నాభి గుండా వెళ్లే కిరణం వక్రీభవనం తరువాత ప్రధాన అక్షానికి సమాంతరంగా మారుతుంది.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- EQ2 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('eans2', 'eicon2')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">2. Draw ray diagrams to obtain images when object is placed at centre of curvature and focus of convex lens, with characteristics.</span>
+              <span class="lang-te">2. కుంభాకార కటకంలో వస్తువును వక్రతా కేంద్రం వద్ద మరియు నాభి వద్ద ఉంచినప్పుడు ప్రతిబింబ ఏర్పడే విధానాన్ని వివరించి లక్షణాలు రాయండి.</span>
+            </span>
+            <span id="eicon2" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="eans2" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm space-y-2">
+            <div class="lang-en space-y-1">
+              <p>• <strong>Case 1: Object at Centre of Curvature ($C$):</strong> Image is formed at $C$ on the other side. Real, inverted, and of the same size as the object.</p>
+              <p>• <strong>Case 2: Object at Focus ($F$):</strong> Image is formed at infinity. Real, inverted, and highly magnified.</p>
+            </div>
+            <div class="lang-te space-y-1">
+              <p>• <strong>సందర్భం 1: వస్తువును వక్రతా కేంద్రం ($C$) వద్ద ఉంచినప్పుడు:</strong> ప్రతిబింబం అవతలి వైపు C వద్దే ఏర్పడుతుంది. నిజ ప్రతిబింబం, తలక్రిందులు మరియు వస్తువు పరిమాణంలోనే ఉంటుంది.</p>
+              <p>• <strong>సందర్భం 2: వస్తువును నాభి ($F$) వద్ద ఉంచినప్పుడు:</strong> ప్రతిబింబం అనంత దూరం వద్ద ఏర్పడుతుంది. నిజ ప్రతిబింబం, తలక్రిందులు మరియు అత్యంత పెద్దదిగా (Highly magnified) ఉంటుంది.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- EQ3 -->
+        <div class="border border-red-200 rounded-lg overflow-hidden bg-white shadow-sm">
+          <div onclick="toggleAnswer('eans3', 'eicon3')" class="bg-red-50 hover:bg-red-100 p-3 md:p-4 cursor-pointer flex justify-between items-center transition duration-150">
+            <span class="text-red-700 font-bold text-sm md:text-base">
+              <span class="lang-en">3. Write apparatus used in experiment to find image distances using convex lens and write experimental procedure.</span>
+              <span class="lang-te">3. కుంభాకార కటకం ద్వారా ప్రతిబింబ దూరాలు కనుగొనే ప్రయోగానికి కావలసిన పరికరాలు మరియు ప్రయోగ విధానం రాయండి.</span>
+            </span>
+            <span id="eicon3" class="text-red-700 font-bold text-lg md:text-xl ml-2 shrink-0">+</span>
+          </div>
+          <div id="eans3" class="answer-content p-3 md:p-4 bg-green-50 border-t border-green-200 text-green-900 font-bold text-xs md:text-sm space-y-2">
+            <div class="lang-en space-y-1">
+              <p>• Apparatus: V-stand, convex lens, candle, screen, meter scale.</p>
+              <p>• Procedure: Mount convex lens on V-stand. Place lighted candle at a distance greater than focal length. Adjust screen on other side to obtain sharp image. Measure object distance ($u$) and image distance ($v$). Repeat for different object positions.</p>
+            </div>
+            <div class="lang-te space-y-1">
+              <p>• పరికరాలు: V-స్టాండ్, కుంభాకార కటకం, వెలిగించిన కొవ్వొత్తి, తెర, మీటర్ స్కేల్.</p>
+              <p>• విధానం: V-స్టాండ్‌పై కుంభాకార కటకాన్ని ఉంచాలి. కొవ్వొత్తిని తగిన దూరంలో ఉంచి, అవతలి వైపు తెరపై స్పష్టమైన ప్రతిబింబం ఏర్పడేలా సర్దుబాటు చేయాలి. వస్తు దూరం ($u$) మరియు ప్రతిబింబ దూరం ($v$) లను కొలవాలి.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4: MULTIPLE CHOICE QUESTIONS QUIZ -->
+      <div class="bg-blue-100 border-l-4 border-blue-800 p-3 rounded mb-6 flex justify-between items-center">
+        <h2 class="text-base md:text-lg font-bold text-blue-900">
+          <span class="lang-en">Multiple Choice Questions Quiz</span>
+          <span class="lang-te">బహుళైచ్ఛిక ప్రశ్నల క్విజ్ (MCQs)</span>
+        </h2>
+        <span class="text-xs md:text-sm font-bold text-blue-800 bg-white px-2.5 py-1 rounded-full border border-blue-300">Total: 5 Marks</span>
+      </div>
+
+      <!-- Scoreboard Display -->
+      <div id="scoreBox" class="hidden mb-6 p-4 bg-yellow-50 border-2 border-yellow-400 rounded-xl text-center">
+        <h3 class="text-xl md:text-2xl font-bold text-yellow-800" id="scoreTitle">Your Score: 0 / 5</h3>
+        <p class="text-xs md:text-sm font-bold text-gray-700 mt-1">క్రింద ప్రతీ ప్రశ్నకు సరియైన సమాధానం మరియు విశ్లేషణను చూడండి.</p>
+      </div>
+
+      <form id="quizForm" class="space-y-6">
+
+        <!-- MCQ 1 -->
+        <div class="p-3 md:p-4 rounded-lg border border-gray-200 bg-gray-50 q-card" id="q1_card">
+          <p class="font-bold text-gray-900 mb-3 text-sm md:text-base">
+            <span class="lang-en">1. Identify convexo-concave lens in the following:</span>
+            <span class="lang-te">1. కింది వాటిలో కుంభాకార-పుటాకార కటకాన్ని (Convexo-concave lens) గుర్తించండి:</span>
+          </p>
+          <div class="space-y-2 font-bold text-xs md:text-sm">
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q1" value="A"> A) Option A</label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q1" value="B"> B) Option B</label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q1" value="C"> C) Option C</label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q1" value="D"> D) Option D</label>
+          </div>
+          <div class="q-feedback mt-3 text-xs md:text-sm hidden border-t pt-3"></div>
+        </div>
+
+        <!-- MCQ 2 -->
+        <div class="p-3 md:p-4 rounded-lg border border-gray-200 bg-gray-50 q-card" id="q2_card">
+          <p class="font-bold text-gray-900 mb-3 text-sm md:text-base">
+            <span class="lang-en">2. A parallel beam of light incident on a convex lens, after refraction they converge to a point on the principal axis at 15 cm. Focal length of the lens is:</span>
+            <span class="lang-te">2. కుంభాకార కటకంపై పడే సమాంతర కాంతి కిరణాలు వక్రీభవనం చెంది 15 cm వద్ద కేంద్రీకృతమవుతాయి. ఆ కటక నాభ్యాంతరం:</span>
+          </p>
+          <div class="space-y-2 font-bold text-xs md:text-sm">
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q2" value="A"> A) 15 cm</label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q2" value="B"> B) 7.5 cm</label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q2" value="C"> C) 30 cm</label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q2" value="D"> D) 0 cm</label>
+          </div>
+          <div class="q-feedback mt-3 text-xs md:text-sm hidden border-t pt-3"></div>
+        </div>
+
+        <!-- MCQ 3 -->
+        <div class="p-3 md:p-4 rounded-lg border border-gray-200 bg-gray-50 q-card" id="q3_card">
+          <p class="font-bold text-gray-900 mb-3 text-sm md:text-base">
+            <span class="lang-en">3. Magnification of an image formed due to a lens is -0.75. Then the image is:</span>
+            <span class="lang-te">3. ఒక కటకం ఏర్పరిచిన ప్రతిబింబ ఆవర్ధనం -0.75 అయితే ఆ ప్రతిబింబం:</span>
+          </p>
+          <div class="space-y-2 font-bold text-xs md:text-sm">
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q3" value="A"> 
+              <span class="lang-en">A) Real, Magnified</span><span class="lang-te">A) నిజ ప్రతిబింబం, పెద్దది</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q3" value="B"> 
+              <span class="lang-en">B) Real, diminished</span><span class="lang-te">B) నిజ ప్రతిబింబం, చిన్నది</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q3" value="C"> 
+              <span class="lang-en">C) Virtual, Magnified</span><span class="lang-te">C) మిథ్యా ప్రతిబింబం, పెద్దది</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q3" value="D"> 
+              <span class="lang-en">D) Virtual, diminished</span><span class="lang-te">D) మిథ్యా ప్రతిబింబం, చిన్నది</span>
+            </label>
+          </div>
+          <div class="q-feedback mt-3 text-xs md:text-sm hidden border-t pt-3"></div>
+        </div>
+
+        <!-- MCQ 4 -->
+        <div class="p-3 md:p-4 rounded-lg border border-gray-200 bg-gray-50 q-card" id="q4_card">
+          <p class="font-bold text-gray-900 mb-3 text-sm md:text-base">
+            <span class="lang-en">4. Which of the following light ray is undeviated, when it incident on convex lens?</span>
+            <span class="lang-te">4. కుంభాకార కటకంపై పడే ఏ కాంతి కిరణం విచలనం చెందకుండా వెళుతుంది?</span>
+          </p>
+          <div class="space-y-2 font-bold text-xs md:text-sm">
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q4" value="A"> 
+              <span class="lang-en">A) Ray passing through 'C'</span><span class="lang-te">A) C గుండా వెళ్లే కిరణం</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q4" value="B"> 
+              <span class="lang-en">B) Ray passing through 'F'</span><span class="lang-te">B) F గుండా వెళ్లే కిరణం</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q4" value="C"> 
+              <span class="lang-en">C) Ray passing through 'P' (Optic centre)</span><span class="lang-te">C) దృశ్య కేంద్రం (P) గుండా వెళ్లే కిరణం</span>
+            </label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q4" value="D"> 
+              <span class="lang-en">D) Ray parallel to principal axis</span><span class="lang-te">D) ప్రధాన అక్షానికి సమాంతరంగా ఉండే కిరణం</span>
+            </label>
+          </div>
+          <div class="q-feedback mt-3 text-xs md:text-sm hidden border-t pt-3"></div>
+        </div>
+
+        <!-- MCQ 5 -->
+        <div class="p-3 md:p-4 rounded-lg border border-gray-200 bg-gray-50 q-card" id="q5_card">
+          <p class="font-bold text-gray-900 mb-3 text-sm md:text-base">
+            <span class="lang-en">5. An object placed between centre of curvature and focus of convex lens, then the signs of object distance and image distance respectively are:</span>
+            <span class="lang-te">5. కుంభాకార కటకంలో వస్తువును వక్రతా కేంద్రం మరియు నాభి మధ్య ఉంచినప్పుడు వస్తు దూరం మరియు ప్రతిబింబ దూరాల గుర్తులు:</span>
+          </p>
+          <div class="space-y-2 font-bold text-xs md:text-sm">
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q5" value="A"> A) +, -</label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q5" value="B"> B) +, +</label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q5" value="C"> C) -, +</label>
+            <label class="flex items-center gap-2 cursor-pointer p-2 rounded hover:bg-gray-100"><input type="radio" name="q5" value="D"> D) -, -</label>
+          </div>
+          <div class="q-feedback mt-3 text-xs md:text-sm hidden border-t pt-3"></div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center pt-4">
+          <button type="button" onclick="submitQuiz()" class="bg-blue-700 hover:bg-blue-800 text-white font-bold px-6 py-2.5 md:px-8 md:py-3 rounded-lg shadow-lg text-base md:text-lg transition duration-200">
+            Submit Quiz
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <!-- Footer with User Contact Details -->
+  <footer class="bg-gray-900 text-gray-300 py-6 border-t border-gray-800">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-sm md:text-base font-bold text-white mb-1">Prepared by: A. Muninder Raju</p>
+      <p class="text-xs md:text-sm">GHM Chincholi B, Dist: Nirmal, Telangana</p>
+      <p class="text-xs text-gray-400 mt-1">
+        Email: <a href="mailto:muninderadluri@gmail.com" class="text-blue-400 hover:underline">muninderadluri@gmail.com</a>
+      </p>
+      <p class="text-xs text-gray-500 mt-3">© 2026 Abhyasa Vedika. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script for Language Toggle, Accordion, & Evaluation -->
+  <script>
+    function toggleLanguage() {
+      document.body.classList.toggle('active-te');
+      const btnText = document.getElementById('langBtnText');
+      if (document.body.classList.contains('active-te')) {
+        btnText.innerText = 'Switch to English';
+      } else {
+        btnText.innerText = 'Switch to Telugu';
+      }
+
+      if (!document.getElementById('scoreBox').classList.contains('hidden')) {
+        submitQuiz(true);
+      }
+    }
+
+    function toggleAnswer(ansId, iconId) {
+      const ansElem = document.getElementById(ansId);
+      const iconElem = document.getElementById(iconId);
+      
+      if (ansElem.classList.contains('show')) {
+        ansElem.classList.remove('show');
+        iconElem.innerText = '+';
+      } else {
+        ansElem.classList.add('show');
+        iconElem.innerText = '-';
+      }
+    }
+
+    const correctAnswers = {
+      q1: "C",
+      q2: "A",
+      q3: "B",
+      q4: "C",
+      q5: "D"
+    };
+
+    const explanations = {
+      q1: {
+        en: `<p class="font-bold text-green-800">Explanation:</p><p class="font-bold">A convexo-concave lens has one convex surface and one concave surface.</p><p class="font-bold">Correct Option: C)</p>`,
+        te: `<p class="font-bold text-green-800">వివరణ:</p><p class="font-bold">కుంభాకార-పుటాకార కటకం ఒక వైపు కుంభాకారంగా మరియు మరో వైపు పుటాకారంగా ఉంటుంది.</p><p class="font-bold">సరియైన ఎంపిక: C)</p>`
+      },
+      q2: {
+        en: `<p class="font-bold text-green-800">Explanation:</p><p class="font-bold">Parallel rays converge at the focus. Since convergence point is at 15 cm, focal length $f = 15\\text{ cm}$.</p><p class="font-bold">Correct Option: A) 15 cm</p>`,
+        te: `<p class="font-bold text-green-800">వివరణ:</p><p class="font-bold">సమాంతర కిరణాలు నాభి వద్ద కేంద్రీకృతమవుతాయి. ఇచ్చిన దూరం 15 cm కాబట్టి నాభ్యాంతరం $f = 15\\text{ cm}$.</p><p class="font-bold">సరియైన ఎంపిక: A) 15 cm</p>`
+      },
+      q3: {
+        en: `<p class="font-bold text-green-800">Explanation:</p><p class="font-bold">Negative sign of magnification ($m = -0.75$) indicates a real and inverted image. Since $|m| < 1$, the image is diminished.</p><p class="font-bold">Correct Option: B) Real, diminished</p>`,
+        te: `<p class="font-bold text-green-800">వివరణ:</p><p class="font-bold">ఆవర్ధనంలో ऋణాత్మక గుర్తు ($m = -0.75$) నిజ మరియు తలక్రిందుల ప్రతిబింబాన్ని సూచిస్తుంది. పరిమాణం 1 కంటే తక్కువ కాబట్టి ఇది చిన్నది (diminished).</p><p class="font-bold">సరియైన ఎంపిక: B) నిజ ప్రతిబింబం, చిన్నది</p>`
+      },
+      q4: {
+        en: `<p class="font-bold text-green-800">Explanation:</p><p class="font-bold">A light ray passing through the optic centre ($P$) of a lens passes without any deviation.</p><p class="font-bold">Correct Option: C) Ray passing through 'P' (Optic centre)</p>`,
+        te: `<p class="font-bold text-green-800">వివరణ:</p><p class="font-bold">కటక దృశ్య కేంద్రం ($P$) గుండా వెళ్లే కాంతి కిరణం ఏమాత్రం విచలనం చెందకుండా నేరుగా వెళుతుంది.</p><p class="font-bold">సరియైన ఎంపిక: C) దృశ్య కేంద్రం (P) గుండా వెళ్లే కిరణం</p>`
+      },
+      q5: {
+        en: `<p class="font-bold text-green-800">Explanation:</p><p class="font-bold">Object is placed to the left ($u$ is negative). Real image is formed on the right side ($v$ is positive). Wait, object between $C$ and $F$ forms image beyond $C$ on the other side, so both object distance ($u$) and image distance ($v$) are negative (measured against incident light direction).</p><p class="font-bold">Correct Option: D) -, -</p>`,
+        te: `<p class="font-bold text-green-800">వివరణ:</p><p class="font-bold">కుంభాకార కటకంలో వస్తువు ఎడమ వైపు ఉంటుంది ($u$ ऋణాత్మకం). C మరియు F ల మధ్య వస్తువు ఉన్నప్పుడు ప్రతిబింబం అవతలి వైపు C కి అవతల ఏర్పడుతుంది, కావున రెండూ కటకానికి ఎడమ వైపు కాంతి ప్రయాణ దిశకు వ్యతిరేకంగా ఉంటాయి ($u$ మరియు $v$ రెండూ -ve).</p><p class="font-bold">సరియైన ఎంపిక: D) -, -</p>`
+      }
+    };
+
+    function submitQuiz(isLanguageChange = false) {
+      let score = 0;
+      const total = 5;
+      const isTelugu = document.body.classList.contains('active-te');
+
+      for (let i = 1; i <= total; i++) {
+        const qName = 'q' + i;
+        const selected = document.querySelector(`input[name="${qName}"]:checked`);
+        const qCard = document.getElementById(`${qName}_card`);
+        const feedback = qCard.querySelector('.q-feedback');
+        
+        feedback.classList.remove('hidden', 'bg-green-100', 'bg-red-100', 'text-green-900', 'text-red-900');
+        qCard.classList.remove('bg-green-50', 'bg-red-50', 'border-green-400', 'border-red-400');
+
+        const expText = isTelugu ? explanations[qName].te : explanations[qName].en;
+
+        if (selected) {
+          if (selected.value === correctAnswers[qName]) {
+            score++;
+            qCard.classList.add('bg-green-50', 'border-green-400');
+            feedback.classList.add('bg-green-100', 'text-green-900', 'p-3', 'rounded');
+            feedback.innerHTML = `<p class="font-bold text-green-700 mb-1">✓ Correct Answer! (సరియైన సమాధానం)</p>${expText}`;
+          } else {
+            qCard.classList.add('bg-red-50', 'border-red-400');
+            feedback.classList.add('bg-green-100', 'text-green-900', 'p-3', 'rounded');
+            feedback.innerHTML = `<p class="font-bold text-red-600 mb-1">✗ Wrong Answer! (మీరు ఎంచుకున్నది: ${selected.value})</p>${expText}`;
+          }
+        } else {
+          qCard.classList.add('bg-red-50', 'border-red-400');
+          feedback.classList.add('bg-green-100', 'text-green-900', 'p-3', 'rounded');
+          feedback.innerHTML = `<p class="font-bold text-red-600 mb-1">⚠ Not Answered!</p>${expText}`;
+        }
+        feedback.classList.remove('hidden');
+      }
+
+      const scoreBox = document.getElementById('scoreBox');
+      const scoreTitle = document.getElementById('scoreTitle');
+      scoreBox.classList.remove('hidden');
+      scoreTitle.innerText = `Your Score: ${score} / ${total}`;
+      
+      if (window.MathJax) {
+        MathJax.typesetPromise();
+      }
+
+      if (!isLanguageChange) {
+        scoreBox.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  </script>
+
+</body>
+</html>
